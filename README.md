@@ -12,6 +12,6 @@ Hosts my vimrc and necessary information for quickly setting up my vim on multip
 - Clone repository
 - Create symlink from vimfiles to .vim/ and _vimrc to .vim/vimrc
 
-Finally, in .vim/ run 
-git submodule init
-git submodule pull
+Finally, in .vim/ run  
+    git submodule init  
+    git submodule pull  
