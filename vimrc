@@ -1,10 +1,5 @@
 " Chaz Bailey's vimrc
 
-" Plugin Management {{{
-" Get pathogen up and running
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-" }}}
 " General Key Mappings {{{
 let mapleader = ","
 
@@ -27,6 +22,16 @@ nnoremap k gk
 " Command 'Vimrc' to open vimrc
 command Vimrc execute "e $MYVIMRC"
 
+" }}}
+" Plugin Management {{{
+" Get pathogen up and running
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+" NERDTree Config {{{
+" Set nerd tree to ,n
+nnoremap <leader>n :NERDTree<CR>
+" }}}
 " }}}
 " Backup {{{
 " Turn off the creation of those backup files... just SAVE
