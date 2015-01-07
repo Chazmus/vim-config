@@ -35,6 +35,8 @@ set nobackup
 " Windows Specific {{{
 if !has("unix")
     source $VIMRUNTIME\mswin.vim
+    " Set the default directory to the C:\
+    cd C:\
 endif
 " }}}
 " Colours {{{
@@ -79,6 +81,9 @@ set incsearch
 
 " Highlight matches
 set hlsearch
+
+" Ignore case
+set ignorecase
 " }}}
 " Folding {{{
 " Enable folding
