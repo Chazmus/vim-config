@@ -19,6 +19,10 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+" Command 'Vimrc' to open vimrc
+command Vimrc execute "e $MYVIMRC"
+
 " }}}
 " Misc {{{
 " Turn off the creation of those backup files... just SAVE
