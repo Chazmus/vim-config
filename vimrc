@@ -1,7 +1,11 @@
 " Chaz Bailey's vimrc
 
+" Plugin Management {{{
+" Get pathogen up and running
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+" }}}
 " General Key Mappings {{{
-
 let mapleader = ","
 
 " jj to leave insert mode
@@ -24,18 +28,16 @@ nnoremap k gk
 command Vimrc execute "e $MYVIMRC"
 
 " }}}
-" Misc {{{
+" Backup {{{
 " Turn off the creation of those backup files... just SAVE
 set nobackup
 " }}}
 " Windows Specific {{{
-
 if !has("unix")
     source $VIMRUNTIME\mswin.vim
 endif
 " }}}
 " Colours {{{
-
 " Set a colourscheme
 colorscheme desert
 
@@ -53,14 +55,14 @@ set softtabstop=4
 set expandtab
 " }}}
 " UI Config {{{
+" Load filetype specific indent files and plugins
+filetype plugin indent on
+
 " Show line numbers
 set number
 
 " Show last command in bottom bar
 set showcmd
-
-" Load filetype specific indent files and plugins
-filetype plugin indent on
 
 " Visual autocomplete for command menu
 set wildmenu
@@ -72,7 +74,6 @@ set lazyredraw
 set showmatch
 " }}}
 " Searching {{{
-
 " Search as characters are entered
 set incsearch
 
@@ -80,7 +81,6 @@ set incsearch
 set hlsearch
 " }}}
 " Folding {{{
-
 " Enable folding
 set foldenable
 
