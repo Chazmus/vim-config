@@ -8,6 +8,8 @@ inoremap jj <Esc>
 
 " CTRL-Backspace to delete the previous word
 inoremap <C-BS> <C-W>
+" CTRL-Delete to delete the next word
+inoremap <C-Del> <Esc>dwi
 
 " Space open/closes folds
 nnoremap <space> za
@@ -31,6 +33,10 @@ execute pathogen#infect()
 " NERDTree Config {{{
 " Set nerd tree to ,n
 nnoremap <leader>n :NERDTreeToggle<CR>
+" }}}
+" CtrlP Config {{{
+" Set CtrlP to ,p
+nnoremap <leader>p :CtrlPMixed<CR>
 " }}}
 " }}}
 " Backup {{{
