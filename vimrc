@@ -30,7 +30,7 @@ execute pathogen#infect()
 
 " NERDTree Config {{{
 " Set nerd tree to ,n
-nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 " }}}
 " }}}
 " Backup {{{
