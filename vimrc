@@ -57,16 +57,6 @@ colorscheme desert
 " Enable syntax processing
 syntax enable
 " }}}
-" Spaces & Tabs {{{
-" Number of visual spaces per TAB (reading)
-set tabstop=4
-
-" Number of spaces in tab when editing
-set softtabstop=4
-
-" Tabs are spaces
-set expandtab
-" }}}
 " UI Config {{{
 " Load filetype specific indent files and plugins
 filetype plugin indent on
@@ -85,6 +75,27 @@ set lazyredraw
 
 " Highlight matching [{()}]
 set showmatch
+" }}}
+" Spaces & Tabs {{{
+" Tabs are spaces
+set expandtab
+
+" Number of visual spaces per TAB (reading)
+set tabstop=4
+
+" Number of spaces in tab when editing
+set softtabstop=4
+
+" Controls how many columns text is indented
+set shiftwidth=4
+
+" Smart indenting
+set smartindent
+
+" Auto indenting
+set autoindent
+
+
 " }}}
 " Searching {{{
 " Search as characters are entered
