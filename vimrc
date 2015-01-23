@@ -29,6 +29,7 @@ command Vimrc execute "e $MYVIMRC"
 " Get pathogen up and running
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " NERDTree Config {{{
 " Set nerd tree to ,n
@@ -56,6 +57,12 @@ colorscheme desert
 
 " Enable syntax processing
 syntax enable
+
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux'
+set t_Co=16
+endif
+
 " }}}
 " UI Config {{{
 " Load filetype specific indent files and plugins
