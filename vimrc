@@ -64,6 +64,9 @@ filetype plugin indent on
 " Show line numbers
 set number
 
+" Show ruler
+set ruler
+
 " Show last command in bottom bar
 set showcmd
 
@@ -75,6 +78,7 @@ set lazyredraw
 
 " Highlight matching [{()}]
 set showmatch
+
 " }}}
 " Spaces & Tabs {{{
 " Tabs are spaces
@@ -95,6 +99,8 @@ set smartindent
 " Auto indenting
 set autoindent
 
+" Matchit Macro for XML and HTML (Extends the power of %)
+runtime! macros/matchit.vim
 
 " }}}
 " Searching {{{
