@@ -39,6 +39,11 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " Set CtrlP to ,p
 nnoremap <leader>p :CtrlPMixed<CR>
 " }}}
+" vim-javascript Config{{{
+" Enable javascript syntax highlighting
+let g:javascript_enable_domhtmlcss = 1
+" }}}
+
 " }}}
 " Backup {{{
 " Turn off the creation of those backup files... just SAVE
