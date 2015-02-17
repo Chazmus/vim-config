@@ -34,6 +34,7 @@ execute pathogen#helptags()
 " NERDTree Config {{{
 " Set nerd tree to ,n
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 " }}}
 " CtrlP Config {{{
 " Set CtrlP to ,p
