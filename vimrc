@@ -44,6 +44,14 @@ nnoremap <leader>p :CtrlPMixed<CR>
 " Enable javascript syntax highlighting
 let g:javascript_enable_domhtmlcss = 1
 " }}}
+" Omni-sharp Config{{{
+" Enable c# autocompletion
+set omnifunc=syntaxcomplete#Complete
+
+" Set Ctrl-Space in insert mode to use omnisharp autocomplete
+inoremap <c-Space> <c-x><c-o>
+
+" }}}
 
 " }}}
 " Backup {{{
@@ -52,7 +60,9 @@ set nobackup
 " }}}
 " Windows Specific {{{
 if !has("unix")
-    source $VIMRUNTIME\mswin.vim
+    " Uncomment the line below to get all your favourite windows bindings
+    " back!
+    " source $VIMRUNTIME\mswin.vim
     " Set the default directory to the C:\
     cd C:\
 endif
