@@ -120,13 +120,6 @@ set updatetime=500
 
 
 " }}}
-" Mini Buffer Explorer Config {{{
-" Set open Mini Buffer Explorer
-nnoremap <leader>b :MBEToggle<CR>
-nnoremap <leader>bf :MBEFocus<CR>
-nnoremap <leader>bn :MBEbn<CR>
-nnoremap <leader>bp :MBEbp<CR>
-" }}}
 
 " }}}
 " Backup {{{
