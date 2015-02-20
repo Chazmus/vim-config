@@ -25,6 +25,3 @@
 [submodule "bundle/vim-powershell"]
 	path = bundle/vim-powershell
 	url = https://github.com/PProvost/vim-ps1.git
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
