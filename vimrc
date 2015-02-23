@@ -24,9 +24,6 @@ nnoremap <leader>b :buffers<CR>:buffer<Space>
 nnoremap j gj
 nnoremap k gk
 
-" Command 'Vimrc' to open vimrc
-command vimrc execute "e $MYVIMRC"
-
 " }}}
 " Plugin Management {{{
 " Get pathogen up and running
