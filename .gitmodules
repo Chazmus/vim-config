@@ -25,3 +25,6 @@
 [submodule "bundle/vim-powershell"]
 	path = bundle/vim-powershell
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "bundle/ShowMarks"]
+	path = bundle/ShowMarks
+	url = https://github.com/vim-scripts/ShowMarks.git

@@ -17,12 +17,15 @@ nnoremap <space> za
 " Turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Sweet ass buffer mapping. ,b to list and prepare for a buffer change
+nnoremap <leader>b :buffers<CR>:buffer<Space>
+
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
 
 " Command 'Vimrc' to open vimrc
-command Vimrc execute "e $MYVIMRC"
+command vimrc execute "e $MYVIMRC"
 
 " }}}
 " Plugin Management {{{
@@ -120,6 +123,18 @@ set updatetime=500
 
 
 " }}}
+" ShowMarks Config {{{
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let g:showmarks_enable = 1
+" For marks a-z
+highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
+" For marks A-Z
+highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
+" For all other marks
+highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
+" For multiple marks on the same line.
+highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
+" }}}
 
 " }}}
 " Backup {{{
@@ -129,8 +144,8 @@ set nobackup
 " Windows Specific {{{
 if !has("unix")
     " Uncomment the line below to get all your favourite windows bindings
-    " back!
     " source $VIMRUNTIME\mswin.vim
+
     " Set the default directory to the C:\
     cd C:\
 endif
