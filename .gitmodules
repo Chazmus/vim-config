@@ -43,6 +43,3 @@
 [submodule "bundle/mru"]
 	path = bundle/mru
 	url = https://github.com/yegappan/mru.git
-[submodule "bundle/showmarks"]
-	path = bundle/showmarks
-	url = https://github.com/vim-scripts/ShowMarks.git
