@@ -14,16 +14,24 @@ inoremap <C-Del> <Esc>dwi
 " Space open/closes folds
 nnoremap <space> za
 
-" Turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-
-" Sweet ass buffer mapping. ,b to list and prepare for a buffer change
-nnoremap <leader>b :buffers<CR>:buffer<Space>
-
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+nnoremap ; :
 
+command Vimrc execute "e $MYVIMRC"
+
+" }}}
+" Leader tags{{{
+" Turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+" Sweet ass buffer mapping. ,b to list and prepare for a buffer change
+nnoremap <leader>b :buffers<CR>:buffer<Space>
+" Set nerd tree to ,n
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+" Set CtrlP to ,p
+nnoremap <leader>p :CtrlPMixed<CR>
 " }}}
 " Plugin Management {{{
 " Get pathogen up and running
@@ -32,13 +40,10 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 " NERDTree Config {{{
-" Set nerd tree to ,n
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
+" Show hidden files and folders by default
+let NERDTreeShowHidden=0
 " }}}
 " CtrlP Config {{{
-" Set CtrlP to ,p
-nnoremap <leader>p :CtrlPMixed<CR>
 " }}}
 " vim-javascript Config{{{
 " Enable javascript syntax highlighting
@@ -60,8 +65,6 @@ augroup omnisharp_commands
 
     " Synchronous build (blocks Vim)
     "autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
-    " Builds can also run asynchronously with vim-dispatch installed
-    autocmd FileType cs nnoremap <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
     " automatic syntax check on events (TextChanged requires Vim 7.4)
     autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 

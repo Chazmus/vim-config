@@ -25,9 +25,6 @@
 [submodule "bundle/vim-powershell"]
 	path = bundle/vim-powershell
 	url = https://github.com/PProvost/vim-ps1.git
-[submodule "bundle/ShowMarks"]
-	path = bundle/ShowMarks
-	url = https://github.com/vim-scripts/ShowMarks.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
@@ -40,3 +37,12 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/Tcomment"]
+	path = bundle/Tcomment
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/mru"]
+	path = bundle/mru
+	url = https://github.com/yegappan/mru.git
+[submodule "bundle/showmarks"]
+	path = bundle/showmarks
+	url = https://github.com/vim-scripts/ShowMarks.git
