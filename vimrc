@@ -144,7 +144,7 @@ set nobackup
 " Windows Specific {{{
 if !has("unix")
     " Uncomment the line below to get all your favourite windows bindings
-    " source $VIMRUNTIME\mswin.vim
+    source $VIMRUNTIME\mswin.vim
 
     " Set the default directory to the C:\
     cd C:\
@@ -231,11 +231,13 @@ set foldnestmax=10
 
 " Set folds based on syntax
 set foldmethod=syntax
+
+" Sets auto folding on xml
+let g:xml_syntax_folding=1
 " }}}
 " Keeping vimrc organised {{{
-set foldmethod=marker
-set foldlevelstart=0
-set modelines=1
-" vim:foldmethod=marker:foldlevel=0
+" Turns on modeline searching. Such as for the line below it setting up the
+" fold method
+set modeline
+" vim: foldmethod=marker:foldlevelstart=0:foldlevel=0
 " }}}
-
