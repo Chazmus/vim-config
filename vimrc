@@ -19,8 +19,18 @@ nnoremap j gj
 nnoremap k gk
 nnoremap ; :
 
+" Move around windows quickly
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
+
 command Vimrc execute "e $MYVIMRC"
 
+" }}}
+" User created commands{{{
+" Quick grep 'Grep'
+:command -nargs=1 Grep vimgrep /<args>/ **/*
 " }}}
 " Leader tags{{{
 " Turn off search highlight
@@ -32,6 +42,8 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 " Set CtrlP to ,p
 nnoremap <leader>p :CtrlPMixed<CR>
+" Quick grep
+nnoremap <Leader>g :grep<space><C-w><CR>:copen<CR><CR><C-W>b
 " }}}
 " Plugin Management {{{
 " Get pathogen up and running

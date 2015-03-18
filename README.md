@@ -15,6 +15,5 @@ Hosts my vimrc and necessary information for quickly setting up my vim on multip
 ### Initialise
 Finally, in .vim/ run:  
 ```
-git submodule init  
-git submodule pull  
+git submodule update --init --recursive  
 ```
