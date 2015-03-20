@@ -25,25 +25,25 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
-command Vimrc execute "e $MYVIMRC"
-
 " }}}
 " User created commands{{{
-" Quick grep 'Grep'
-:command -nargs=1 Grep vimgrep /<args>/ **/*
+command Vimrc execute "e $MYVIMRC"
 " }}}
 " Leader tags{{{
+
 " Turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
 " Sweet ass buffer mapping. ,b to list and prepare for a buffer change
 nnoremap <leader>b :buffers<CR>:buffer<Space>
-" Set nerd tree to ,n
+
+" NERD Tree
 nnoremap <leader>n :NERDTreeToggle<CR>
+" NERD Tree find
 nnoremap <leader>nf :NERDTreeFind<CR>
+
 " Set CtrlP to ,p
 nnoremap <leader>p :CtrlPMixed<CR>
-" Quick grep
-nnoremap <Leader>g :grep<space><C-w><CR>:copen<CR><CR><C-W>b
 " }}}
 " Plugin Management {{{
 " Get pathogen up and running
@@ -72,6 +72,27 @@ highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
 highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
 " For multiple marks on the same line.
 highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
+" }}}
+" Easy-Grep Config {{{
+let g:EasyGrepFileAssociations='C:/Users/sp_admin/Desktop/Vim/vimfiles/bundle/EasyGrep/plugin/EasyGrepFileAssociations'
+let g:EasyGrepMode=0
+let g:EasyGrepCommand=1
+let g:EasyGrepRecursive=1
+let g:EasyGrepSearchCurrentBufferDir=1
+let g:EasyGrepIgnoreCase=1
+let g:EasyGrepHidden=1
+let g:EasyGrepFilesToExclude=''
+let g:EasyGrepAllOptionsInExplorer=1
+let g:EasyGrepWindow=0
+let g:EasyGrepReplaceWindowMode=0
+let g:EasyGrepOpenWindowOnMatch=1
+let g:EasyGrepEveryMatch=0
+let g:EasyGrepJumpToMatch=1
+let g:EasyGrepInvertWholeWord=0
+let g:EasyGrepFileAssociationsInExplorer=0
+let g:EasyGrepExtraWarnings=1
+let g:EasyGrepOptionPrefix='<leader>vy'
+let g:EasyGrepReplaceAllPerFile=0
 " }}}
 
 " }}}

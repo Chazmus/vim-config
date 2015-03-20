@@ -40,3 +40,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/command-t.git
+[submodule "bundle/EasyGrep"]
+	path = bundle/EasyGrep
+	url = https://github.com/vim-scripts/EasyGrep.git
