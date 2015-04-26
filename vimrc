@@ -38,7 +38,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>b :buffers<CR>:buffer<Space>
 
 " NERD Tree
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>nn :NERDTreeToggle<CR>
 " NERD Tree find
 nnoremap <leader>nf :NERDTreeFind<CR>
 
@@ -93,6 +93,10 @@ let g:EasyGrepFileAssociationsInExplorer=0
 let g:EasyGrepExtraWarnings=1
 let g:EasyGrepOptionPrefix='<leader>vy'
 let g:EasyGrepReplaceAllPerFile=0
+" }}}
+" Syntastic Config {{{
+" Set jshint as the javascript checker
+let g:syntastic_javascript_checkers = ['jshint']
 " }}}
 
 " }}}
