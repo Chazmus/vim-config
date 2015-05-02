@@ -53,7 +53,7 @@ execute pathogen#helptags()
 
 " NERDTree Config {{{
 " Show hidden files and folders by default
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 " }}}
 " CtrlP Config {{{
 " }}}
@@ -98,7 +98,16 @@ let g:EasyGrepReplaceAllPerFile=0
 " Set jshint as the javascript checker
 let g:syntastic_javascript_checkers = ['jshint']
 " }}}
+" Taglist Config {{{
+if has("win32")
+    let Tlist_Ctags_Cmd="C:/Users/Chaz/Vim/.vim/ctags.exe"
+endif
+" }}}
 
+" Vim Surround Config {{{
+"  
+
+" }}}
 " }}}
 " Backup {{{
 " Turn off the creation of those backup files... just SAVE
@@ -110,7 +119,7 @@ if !has("unix")
     source $VIMRUNTIME\mswin.vim
 
     " Set the default directory to the C:\
-    cd C:\
+    cd C:/Users/Chaz/workspace
 endif
 " }}}
 " Colours {{{
