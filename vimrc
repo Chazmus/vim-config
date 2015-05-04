@@ -13,7 +13,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/Syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp'
 Bundle 'pangloss/vim-javascript'
 Bundle 'PProvost/vim-ps1.git'
@@ -25,9 +24,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'yegappan/mru'
 Bundle 'wincent/command-t'
 Bundle 'vim-scripts/taglist'
-Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/AutoComplPop'
-Bundle 'gmarik/vundle'
 
 " }}}
 " General Key Mappings {{{
