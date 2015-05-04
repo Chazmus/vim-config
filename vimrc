@@ -1,5 +1,36 @@
 " Chaz Bailey's vimrc
 
+
+" Vundle{{{
+" 
+filetype off
+set nocompatible
+set rtp+=~/Vim/.vim/bundle/vundle
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/Syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp'
+Bundle 'pangloss/vim-javascript'
+Bundle 'PProvost/vim-ps1.git'
+Bundle 'garbas/vim-snipmate'
+Bundle 'tomtom/tlib_vim.git'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'honza/vim-snippets'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'yegappan/mru'
+Bundle 'wincent/command-t'
+Bundle 'vim-scripts/taglist'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'gmarik/vundle'
+
+" }}}
 " General Key Mappings {{{
 let mapleader = ","
 
