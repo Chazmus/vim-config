@@ -1,6 +1,5 @@
 " Chaz Bailey's vimrc
 
-
 " Vundle{{{
 " 
 filetype off
