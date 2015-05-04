@@ -103,9 +103,9 @@ if has("win32")
     let Tlist_Ctags_Cmd="C:/Users/Chaz/Vim/.vim/ctags.exe"
 endif
 " }}}
-
-" Vim Surround Config {{{
-"  
+" Snipmate Config {{{
+" Allow AutoComplPop to use snipmate
+let g:acp_behaviorSnipmateLength = 1
 
 " }}}
 " }}}
@@ -124,7 +124,7 @@ endif
 " }}}
 " Colours {{{
 " Set a colourscheme
-colorscheme desert
+colorscheme darkblue
 
 " Enable syntax processing
 syntax enable
