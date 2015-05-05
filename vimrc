@@ -4,7 +4,7 @@
 " 
 filetype off
 set nocompatible
-set rtp+=~/Vim/.vim/bundle/vundle
+set rtp+=$VIM_HOME/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-endwise'
@@ -13,7 +13,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/Syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp'
+Bundle 'kien/ctrlp.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'PProvost/vim-ps1.git'
 Bundle 'garbas/vim-snipmate'
@@ -23,7 +23,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'yegappan/mru'
 Bundle 'wincent/command-t'
-Bundle 'vim-scripts/taglist'
+Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/AutoComplPop'
 
 " }}}
@@ -81,6 +81,9 @@ execute pathogen#helptags()
 " NERDTree Config {{{
 " Show hidden files and folders by default
 let NERDTreeShowHidden=1
+
+" Set the default directory to home
+cd $HOME
 " }}}
 " CtrlP Config {{{
 " }}}
@@ -101,7 +104,7 @@ highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
 highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 " }}}
 " Easy-Grep Config {{{
-let g:EasyGrepFileAssociations='C:/Users/sp_admin/Desktop/Vim/vimfiles/bundle/EasyGrep/plugin/EasyGrepFileAssociations'
+let g:EasyGrepFileAssociations='$VIM_HOME/.vim/bundle/EasyGrep/plugin/EasyGrepFileAssociations'
 let g:EasyGrepMode=0
 let g:EasyGrepCommand=1
 let g:EasyGrepRecursive=1
@@ -127,7 +130,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " }}}
 " Taglist Config {{{
 if has("win32")
-    let Tlist_Ctags_Cmd="C:/Users/Chaz/Vim/.vim/ctags.exe"
+    let Tlist_Ctags_Cmd="$VIM_HOME/.vim/ctags.exe"
 endif
 " }}}
 " Snipmate Config {{{
@@ -145,8 +148,6 @@ if !has("unix")
     " Uncomment the line below to get all your favourite windows bindings
     source $VIMRUNTIME\mswin.vim
 
-    " Set the default directory to the C:\
-    cd C:/Users/Chaz/workspace
 endif
 " }}}
 " Colours {{{
