@@ -1,83 +1,36 @@
 " Chaz Bailey's vimrc
 
+" Plugin Management {{{
+" First things first: Vundle
 " Vundle{{{
 " 
 filetype off
 set nocompatible
 set rtp+=$VIM_HOME/.vim/bundle/vundle
 call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/Syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'PProvost/vim-ps1.git'
-Bundle 'garbas/vim-snipmate'
-Bundle 'tomtom/tlib_vim.git'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'honza/vim-snippets'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'yegappan/mru'
-Bundle 'wincent/command-t'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/AutoComplPop'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/Syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'PProvost/vim-ps1.git'
+Plugin 'tomtom/tlib_vim.git'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'yegappan/mru'
+Plugin 'wincent/command-t'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'justinmk/vim-sneak'
+
 
 " }}}
-" General Key Mappings {{{
-let mapleader = ","
-
-" jj to leave insert mode
-inoremap jj <Esc>
-
-" CTRL-Backspace to delete the previous word
-inoremap <C-BS> <C-W>
-" CTRL-Delete to delete the next word
-inoremap <C-Del> <Esc>dwi
-
-" Space open/closes folds
-nnoremap <space> za
-
-" Move vertically by visual line
-nnoremap j gj
-nnoremap k gk
-nnoremap ; :
-
-" Move around windows quickly
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
-nnoremap <C-h> <C-W>h
-
-" }}}
-" User created commands{{{
-command Vimrc execute "e $MYVIMRC"
-" }}}
-" Leader tags{{{
-
-" Turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-
-" Sweet ass buffer mapping. ,b to list and prepare for a buffer change
-nnoremap <leader>b :buffers<CR>:buffer<Space>
-
-" NERD Tree
-nnoremap <leader>nn :NERDTreeToggle<CR>
-" NERD Tree find
-nnoremap <leader>nf :NERDTreeFind<CR>
-
-" Set CtrlP to ,p
-nnoremap <leader>p :CtrlPMixed<CR>
-" }}}
-" Plugin Management {{{
-" Get pathogen up and running
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-execute pathogen#helptags()
-
 " NERDTree Config {{{
 " Show hidden files and folders by default
 let NERDTreeShowHidden=1
@@ -135,9 +88,65 @@ endif
 " }}}
 " Snipmate Config {{{
 " Allow AutoComplPop to use snipmate
+fun! GetSnipsInCurrentScope()
+    let snips = {}
+    for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
+        call extend(snips, get(s:snippets, scope, {}), 'keep')
+        call extend(snips, get(s:multi_snips, scope, {}), 'keep')
+    endfor
+    return snips
+endf 
 let g:acp_behaviorSnipmateLength = 1
+" }}}
+" AutoComplPop Config{{{
+" Allows you to press tab to tab through autocomplete dropdown
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-g>u\<Tab>"
+" }}}
+" }}}
+" General Key Mappings {{{
+let mapleader = ","
+
+" jj to leave insert mode
+inoremap jj <Esc>
+
+" CTRL-Backspace to delete the previous word
+inoremap <C-BS> <C-W>
+" CTRL-Delete to delete the next word
+inoremap <C-Del> <Esc>dwi
+
+" Space open/closes folds
+nnoremap <space> za
+
+" Move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+nnoremap ; :
+
+" Move around windows quickly
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
 
 " }}}
+" User created commands{{{
+command Vimrc execute "e $MYVIMRC"
+" }}}
+" Leader tags{{{
+
+" Turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Sweet ass buffer mapping. ,b to list and prepare for a buffer change
+nnoremap <leader>b :buffers<CR>:buffer<Space>
+
+" NERD Tree
+nnoremap <leader>nn :NERDTreeToggle<CR>
+" NERD Tree find
+nnoremap <leader>nf :NERDTreeFind<CR>
+
+" Set CtrlP to ,p
+nnoremap <leader>p :CtrlPMixed<CR>
 " }}}
 " Backup {{{
 " Turn off the creation of those backup files... just SAVE
