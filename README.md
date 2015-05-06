@@ -13,7 +13,9 @@ Hosts my vimrc and necessary information for quickly setting up my vim on multip
 - Create symlink from vimfiles to .vim/ and _vimrc to .vim/vimrc
 
 ### Initialise
-Finally, in .vim/ run:  
+cd into your .vim/ folder and run:  
 ```
 git submodule update --init --recursive  
 ```
+
+Make sure VIM_HOME is set and add .vim/libs to path
