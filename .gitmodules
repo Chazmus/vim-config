@@ -1,6 +1,3 @@
 [submodule "bundle/vundle"]
 	path = bundle/vundle
 	url = https://github.com/gmarik/vundle.git
-[submodule "libs/jshint"]
-	path = libs/jshint
-	url = https://github.com/jshint/jshint

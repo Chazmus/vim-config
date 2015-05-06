@@ -48,7 +48,7 @@ cd $HOME
 " Enable javascript syntax highlighting
 let g:javascript_enable_domhtmlcss = 1
 " Enable html checking
-let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_html_tidy_exec = 'tidy'
 " }}}
 " ShowMarks Config {{{
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
