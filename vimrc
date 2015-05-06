@@ -22,12 +22,16 @@ Plugin 'tomtom/tlib_vim.git'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'yegappan/mru'
-Plugin 'wincent/command-t'
 Plugin 'vim-scripts/taglist.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
+Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'justinmk/vim-sneak'
+Plugin 'tpope/vim-pathogen'
+Plugin 'Lokaltog/vim-easymotion.git'
+Plugin 'AutoComplPop'
+
+" Run Pathogen for YouCompleteMe
+execute pathogen#infect()
 
 
 " }}}
@@ -43,6 +47,8 @@ cd $HOME
 " vim-javascript Config{{{
 " Enable javascript syntax highlighting
 let g:javascript_enable_domhtmlcss = 1
+" Enable html checking
+let g:syntastic_html_tidy_exec = 'tidy5'
 " }}}
 " ShowMarks Config {{{
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -98,8 +104,21 @@ fun! GetSnipsInCurrentScope()
 endf 
 let g:acp_behaviorSnipmateLength = 1
 " }}}
+" Easymotion Config{{{
+" Lower a-z
+let g:EasyMotion_keys = 'fjdkslaghtyrueiwoqpbnvmcxz'
+" }}}
 " AutoComplPop Config{{{
-" Allows you to press tab to tab through autocomplete dropdown
+" Play nice with SnipMate
+fun! GetSnipsInCurrentScope()
+    let snips = {}
+    for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
+        call extend(snips, get(s:snippets, scope, {}), 'keep')
+        call extend(snips, get(s:multi_snips, scope, {}), 'keep')
+    endfor
+    return snips
+endf
+" Scroll through AutoComplPop with tab
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-g>u\<Tab>"
 " }}}
 " }}}
