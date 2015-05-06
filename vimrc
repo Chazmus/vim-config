@@ -6,8 +6,9 @@
 " 
 filetype off
 set nocompatible
-set rtp+=$VIM_HOME/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-git'
@@ -26,9 +27,10 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'tpope/vim-pathogen'
 Plugin 'Lokaltog/vim-easymotion.git'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-
+if has('python')
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
+endif
 if has('lua')
     " If we have lua then use neocomplete
     Plugin 'Shougo/neocomplete'
@@ -39,6 +41,9 @@ if !has('lua')
     " If we don't have lua then stick with AutoComplPop
     Plugin 'AutoComplPop'
 endif
+
+call vundle#end()
+filetype plugin indent on
 
 " Run Pathogen... just coz
 execute pathogen#infect()
