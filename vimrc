@@ -204,7 +204,7 @@ endif
 " }}}
 " }}}
 " General Key Mappings {{{
-let mapleader = ","
+let mapleader = " "
 
 " jj to leave insert mode
 inoremap jj <Esc>
@@ -214,8 +214,8 @@ inoremap <C-BS> <C-W>
 " CTRL-Delete to delete the next word
 inoremap <C-Del> <Esc>dwi
 
-" Space open/closes folds
-nnoremap <space> za
+" Leader f to toggle folds
+nnoremap <leader>f za
 
 " Move vertically by visual line
 nnoremap j gj
