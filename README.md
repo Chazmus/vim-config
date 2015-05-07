@@ -2,6 +2,8 @@
 
 Hosts my vimrc and necessary information for quickly setting up my vim on multiple machines.
 
+For full functionality requires vim compiled with python and lua support.
+
 ### In Linux
 - Clone repository to ~/.vim
 - Delete ~/.vimrc
