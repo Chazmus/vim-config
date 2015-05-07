@@ -27,6 +27,7 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'tpope/vim-pathogen'
 Plugin 'Lokaltog/vim-easymotion.git'
+Plugin 'EasyGrep'
 if has('python')
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
@@ -77,7 +78,6 @@ highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
 highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 " }}}
 " Easy-Grep Config {{{
-let g:EasyGrepFileAssociations='$VIM_HOME/.vim/bundle/EasyGrep/plugin/EasyGrepFileAssociations'
 let g:EasyGrepMode=0
 let g:EasyGrepCommand=1
 let g:EasyGrepRecursive=1
@@ -234,9 +234,6 @@ command Vimrc execute "e $MYVIMRC"
 " }}}
 " Leader tags{{{
 
-" Turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-
 " Sweet ass buffer mapping. ,b to list and prepare for a buffer change
 nnoremap <leader>b :buffers<CR>:buffer<Space>
 
@@ -245,8 +242,6 @@ nnoremap <leader>nn :NERDTreeToggle<CR>
 " NERD Tree find
 nnoremap <leader>nf :NERDTreeFind<CR>
 
-" Set CtrlP to ,p
-nnoremap <leader>p :CtrlPMixed<CR>
 " }}}
 " Backup {{{
 " Turn off the creation of those backup files... just SAVE
