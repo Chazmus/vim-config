@@ -110,6 +110,7 @@ endif
 let g:UltiSnipsExpandTrigger="<C-CR>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " }}}
 " Easymotion Config{{{
 " Lower a-z
