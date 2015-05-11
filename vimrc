@@ -36,7 +36,7 @@ if has('lua')
     " If we have lua then use neocomplete
     Plugin 'Shougo/neocomplete'
     Plugin 'Shougo/neosnippet'
-    let g:neosnippet#snippets_directory = '$HOME/.vim/bundle/vim-snippets/snippets'
+    let g:neosnippet#snippets_directory='$HOME/.vim/bundle/vim-snippets/snippets'
 endif
 if !has('lua')
     " If we don't have lua then stick with AutoComplPop
@@ -214,9 +214,6 @@ inoremap <C-BS> <C-W>
 " CTRL-Delete to delete the next word
 inoremap <C-Del> <Esc>dwi
 
-" Leader f to toggle folds
-nnoremap <leader>f za
-
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
@@ -233,6 +230,9 @@ nnoremap <C-h> <C-W>h
 command Vimrc execute "e $MYVIMRC"
 " }}}
 " Leader tags{{{
+
+" Leader f to toggle folds
+nnoremap <leader>f za
 
 " Sweet ass buffer mapping. ,b to list and prepare for a buffer change
 nnoremap <leader>b :buffers<CR>:buffer<Space>
