@@ -1,8 +1,8 @@
 " Chaz Bailey's vimrc
 
 " Plugin Management {{{
-" First things first: Vundle
 " Vundle{{{
+" Required first is the vundle stuff
 " 
 filetype off
 set nocompatible
@@ -46,7 +46,7 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-" Run Pathogen... just coz
+" Run Pathogen... just coz. It may complain about this the first time it's run
 execute pathogen#infect()
 
 " }}}
@@ -58,6 +58,10 @@ let NERDTreeShowHidden=1
 cd $HOME
 " }}}
 " CtrlP Config {{{
+" }}}
+" Sneak Config {{{
+" Ignore Case
+let g:sneak#use_ic_scs = 1
 " }}}
 " vim-javascript Config{{{
 " Enable javascript syntax highlighting
