@@ -27,6 +27,7 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'tpope/vim-pathogen'
 Plugin 'Lokaltog/vim-easymotion.git'
 Plugin 'EasyGrep'
+Plugin 'altercation/vim-colors-solarized.git'
 if has('python')
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
@@ -231,7 +232,12 @@ nnoremap <C-h> <C-W>h
 
 " }}}
 " User created commands{{{
+
+" Easily open my vimrc
 command Vimrc execute "e $MYVIMRC"
+
+" Format JSON with a python module
+command FormatJSON execute "%!python -m json.tool"
 " }}}
 " Leader tags{{{
 
@@ -260,7 +266,7 @@ endif
 " }}}
 " Colours {{{
 " Set a colourscheme
-colorscheme darkblue
+colorscheme solarized
 
 " Enable syntax processing
 syntax enable
