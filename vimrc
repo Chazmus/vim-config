@@ -266,15 +266,21 @@ endif
 " }}}
 " Colours {{{
 " Set a colourscheme
-colorscheme solarized
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+else
+    colorscheme desert
+endif
+
 
 " Enable syntax processing
 syntax enable
 
 " Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^linux'
-    set t_Co=16
-endif
+"if &t_Co == 8 && $TERM !~# '^linux'
+"    set t_Co=16
+"endif
 
 " }}}
 " UI Config {{{
