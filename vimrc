@@ -36,6 +36,7 @@ if has('lua')
     " If we have lua then use neocomplete
     Plugin 'Shougo/neocomplete'
     Plugin 'Shougo/neosnippet'
+    Plugin 'Shougo/neosnippet-snippets'
     let g:neosnippet#snippets_directory='$HOME/.vim/bundle/vim-snippets/snippets'
 endif
 if !has('lua')
@@ -165,8 +166,14 @@ if has('lua')
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><C-y>  neocomplete#close_popup()
     inoremap <expr><C-e>  neocomplete#cancel_popup()
+    
+    " Plugin key-mappings.
+    imap <C-k> <Plug>(neosnippet_expand_or_jump)
+    smap <C-k> <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k> <Plug>(neosnippet_expand_target)
+
     " Close popup by <Space>.
-    "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+    " inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
     " For cursor moving in insert mode(Not recommended)
     "inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
