@@ -265,11 +265,13 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 set nobackup
 " }}}
 " Windows Specific {{{
+" Uncomment the line below to get all your favourite windows bindings
 if !has("unix")
-    " Uncomment the line below to get all your favourite windows bindings
     source $VIMRUNTIME\mswin.vim
-
+else
+    source $VIMRUNTIME/mswin.vim
 endif
+
 " }}}
 " Colours {{{
 " Set a colourscheme
