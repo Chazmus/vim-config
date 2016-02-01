@@ -28,6 +28,7 @@ Plugin 'tpope/vim-pathogen'
 Plugin 'Lokaltog/vim-easymotion.git'
 Plugin 'EasyGrep'
 Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'rodjek/vim-puppet.git'
 if has('python')
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
@@ -229,7 +230,6 @@ inoremap <C-Del> <Esc>dwi
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
-nnoremap ; :
 
 " Move around windows quickly
 nnoremap <C-j> <C-W>j
@@ -266,10 +266,11 @@ set nobackup
 " }}}
 " Windows Specific {{{
 " Uncomment the line below to get all your favourite windows bindings
+
 if !has("unix")
     source $VIMRUNTIME\mswin.vim
 else
-    source $VIMRUNTIME/mswin.vim
+"    source $VIMRUNTIME/mswin.vim
 endif
 
 " }}}
@@ -313,6 +314,10 @@ set lazyredraw
 
 " Highlight matching [{()}]
 set showmatch
+
+" Show all whitespace
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set list
 
 " }}}
 " Spaces & Tabs {{{
