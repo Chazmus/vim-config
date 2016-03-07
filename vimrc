@@ -316,8 +316,8 @@ set lazyredraw
 set showmatch
 
 " Show all whitespace
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-set list
+" set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+" set list
 
 " }}}
 " Spaces & Tabs {{{
