@@ -259,6 +259,11 @@ nnoremap <leader>nn :NERDTreeToggle<CR>
 " NERD Tree find
 nnoremap <leader>nf :NERDTreeFind<CR>
 
+" Copy & Paste
+vnoremap <leader>c "+y
+vnoremap <leader>p "+p
+
+
 " }}}
 " Backup {{{
 " Turn off the creation of those backup files... just SAVE
