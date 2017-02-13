@@ -302,12 +302,9 @@ syntax enable
 " Load filetype specific indent files and plugins
 filetype plugin indent on
 
-" Show relative line numbers
+" Show relative line numbers and actual line number on selected line.
 set relativenumber
-
-" Show absolute line numbers on blur
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+set number
 
 " Show ruler
 set ruler
