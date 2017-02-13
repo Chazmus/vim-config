@@ -167,7 +167,7 @@ if has('lua')
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><C-y>  neocomplete#close_popup()
     inoremap <expr><C-e>  neocomplete#cancel_popup()
-    
+
     " Plugin key-mappings.
     imap <C-k> <Plug>(neosnippet_expand_or_jump)
     smap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -275,7 +275,7 @@ set nobackup
 if !has("unix")
     source $VIMRUNTIME\mswin.vim
 else
-"    source $VIMRUNTIME/mswin.vim
+    "    source $VIMRUNTIME/mswin.vim
 endif
 
 " }}}
@@ -285,7 +285,7 @@ if has('gui_running')
     set background=dark
     colorscheme solarized
 else
-    colorscheme desert
+    colorscheme ir_black
 endif
 
 
@@ -302,8 +302,12 @@ syntax enable
 " Load filetype specific indent files and plugins
 filetype plugin indent on
 
-" Show line numbers
-set number
+" Show relative line numbers
+set relativenumber
+
+" Show absolute line numbers on blur
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
 
 " Show ruler
 set ruler
@@ -323,6 +327,12 @@ set showmatch
 " Show all whitespace
 " set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 " set list
+
+" Cursor as block in cygwin
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
 
 " }}}
 " Spaces & Tabs {{{
@@ -357,6 +367,18 @@ set hlsearch
 
 " Ignore case
 set ignorecase
+
+" Use the silver surfer if available
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects   .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+endif
+
 " }}}
 " Folding {{{
 " Enable folding
