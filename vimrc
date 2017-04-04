@@ -29,6 +29,7 @@ Plugin 'Lokaltog/vim-easymotion.git'
 Plugin 'EasyGrep'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'rodjek/vim-puppet.git'
+Plugin 'aperezdc/vim-template'
 if has('python')
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
