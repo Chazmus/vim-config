@@ -289,7 +289,7 @@ if has('gui_running')
     set background=dark
     colorscheme solarized
 else
-    colorscheme ir_black
+    colorscheme desert
 endif
 
 
