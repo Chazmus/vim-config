@@ -264,6 +264,9 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 vnoremap <leader>c "+y
 vnoremap <leader>p "+p
 
+" More useful enter and backspace
+nnoremap <Enter> }
+nnoremap <BS> {
 
 " }}}
 " Backup {{{
